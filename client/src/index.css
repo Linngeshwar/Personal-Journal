@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+.light{
+  --background: #f3f4f6;
+  --secondary-background:white ;
+  --primary: black;
+  --secondary: #0066cc;
+    color:black;
+}
+
+.dark{
+  --background: #040404;
+  --secondary-background: #202020;
+  --primary: white;
+  --secondary: #0066cc;
+    color:white;
+} 
+@theme inline{
+  --color-background: var(--background);
+  --color-secondary-bg: var(--secondary-background);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
