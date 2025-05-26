@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 
-.light{
-  --background: #f3f4f6;
-  --secondary-background:white ;
-  --primary: black;
-  --secondary: #0066cc;
+.ocean{
+  --background: #37B7C3 ;
+  --secondary-background:#EBF4F6;
+  --primary: #088395;
+  --secondary: #071952;
     color:black;
 }
 
-.dark{
-  --background: #040404;
-  --secondary-background: #202020;
-  --primary: white;
-  --secondary: #0066cc;
+.purpur{
+  --background: #6A1E55;
+  --secondary-background:#A64D79;
+  --primary: #3B1C32;
+  --secondary: #1A1A1D;
     color:white;
 } 
 @theme inline{
@@ -21,4 +21,29 @@
   --color-secondary-bg: var(--secondary-background);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+}
+
+@theme{
+  --animate-rotateBlue: rotateBlue 0.5s ease-in-out;
+  --animate-rotatePurple: rotatePurple 0.5s ease-in-out;
+  @keyframes rotateBlue {
+  0% {
+    transform: rotateX(0deg);
+    color: #37B7C3;
+  }
+  100% {
+    transform: rotateX(360deg);
+    color: #A64D79;
+  } 
+}
+ @keyframes rotatePurple{
+  0% {
+    transform: rotateX(0deg);
+    color: #A64D79;
+  }
+  100% {
+    transform: rotateX(-360deg);
+    color: #37B7C3;
+  }
+ }
 }
