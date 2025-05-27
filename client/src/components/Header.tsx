@@ -21,7 +21,7 @@ export default function Header() {
     const token = localStorage.getItem("token");
     if (token) {
       try {
-        type DecodedToken = {exp:number;[key:string] :unknown}
+        type DecodedToken = { exp: number; [key: string]: unknown };
         const decoded: DecodedToken = jwtDecode(token);
         const currentTime = Date.now() / 1000;
         if (decoded.exp < currentTime) {
@@ -114,7 +114,7 @@ export default function Header() {
     <>
       <motion.div className="flex flex-row justify-between w-full">
         <motion.div
-          className={`bg-secondary-bg mt-3 w-[8rem] ml-[1rem] md:ml-[2rem] px-5 py-1 flex flex-col *sm:flex-row items-center rounded-xl cursor-pointer overflow-hidden border-2 border-primary ${isMobile ? "w-[5rem] max-w-xs" : ""}`}
+          className={`bg-secondary-bg mt-3 w-[8rem] ml-[1rem] md:ml-[2rem] px-5 py-1 flex flex-col sm:flex-row items-center rounded-xl cursor-pointer overflow-hidden border-2 border-primary ${isMobile ? "w-[5rem] max-w-xs" : ""}`}
           initial="closed"
           animate={showMenuItems ? "open" : "closed"}
           variants={headerVariants}
