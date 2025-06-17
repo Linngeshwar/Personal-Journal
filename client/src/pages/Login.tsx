@@ -73,7 +73,7 @@ export default function Login() {
               <motion.form className="" onSubmit={handleSubmit}>
                 <motion.h2
                   className="text-3xl font-bold mb-4 text-center cursor-default"
-                  whileHover={{ scale: 1.1, color: "#3b82f6" }}
+                  whileHover={{ scale: 1.1 }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
@@ -88,8 +88,8 @@ export default function Login() {
                 >
                   <motion.label
                     htmlFor="email"
-                    whileHover={{ color: "#3b82f6" }}
-                    className="block text-sm font-medium hove:bg-"
+                    whileHover={{ color: "var(--secondary)" }}
+                    className="block text-sm font-medium hover:text-secondary transition-colors duration-200 cursor-pointer"
                   >
                     Email
                   </motion.label>
@@ -109,8 +109,8 @@ export default function Login() {
                 >
                   <motion.label
                     htmlFor="password"
-                    whileHover={{ color: "#3b82f6" }}
-                    className="block text-sm font-medium"
+                    whileHover={{ color: "var(--secondary)" }}
+                    className="block text-sm font-medium hover:text-secondary transition-colors duration-200 cursor-pointer"
                   >
                     Password
                   </motion.label>

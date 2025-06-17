@@ -13,12 +13,14 @@ app.use(
 );
 const AuthRouter = require("./routes/authRoutes");
 const journalRouter = require("./routes/journalRoutes");
+const profileRouter = require("./routes/profileRoutes");
 
 app.get("/api/protected", authenticateToken, (req, res) => {
   res.json({ user: req.user });
 });
 app.use("/api/auth", AuthRouter);
 app.use("/api/journal", journalRouter);
+app.use("/api/profile", profileRouter);
 
 app.listen(3000, () => {
   console.log("Backend server is running on http://localhost:3000");

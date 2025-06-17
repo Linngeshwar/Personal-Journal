@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import ThemeToggle from "./ThemeToggle";
 
@@ -163,7 +164,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
-              Home
+              <Link to="/home">Home</Link>
             </motion.h1>
             <motion.h1
               className={`text-lg font-bold outline-none ${isMobile ? "block" : "hidden sm:block"}`}
@@ -172,7 +173,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
-              Profile
+              <Link to="/profile">Profile</Link>
             </motion.h1>
             <motion.h1
               className={`text-lg font-bold outline-none ${isMobile ? "block" : "hidden sm:block"}`}
@@ -181,7 +182,7 @@ export default function Header() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
-              Contact
+              <Link to="/contact">Contact</Link>
             </motion.h1>
           </div>
         </motion.div>
