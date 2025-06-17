@@ -2,8 +2,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import React, { useEffect } from "react";
 import { jwtDecode } from "jwt-decode";
+// import { AuthProvider } from "./util/AuthContext";
 
 function App() {
   useEffect(() => {
@@ -71,6 +73,10 @@ function App() {
           element={<AuthRoute element={<Register />} />}
         />
         <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
+        <Route
+          path="/profile"
+          element={<ProtectedRoute element={<Profile />} />}
+        />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
     </>

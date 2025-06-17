@@ -1,49 +1,66 @@
 @import "tailwindcss";
 
-
-.ocean{
-  --background: #37B7C3 ;
-  --secondary-background:#EBF4F6;
-  --primary: #088395;
-  --secondary: #071952;
-    color:black;
+/* Custom scrollbars for markdown preview */
+.mde-preview .mde-preview-content::-webkit-scrollbar {
+  width: 8px;
 }
 
-.purpur{
-  --background: #6A1E55;
-  --secondary-background:#A64D79;
-  --primary: #3B1C32;
-  --secondary: #1A1A1D;
-    color:white;
-} 
-@theme inline{
+.mde-preview .mde-preview-content::-webkit-scrollbar-track {
+  background: var(--color-secondary-bg, #ebf4f6);
+}
+
+.mde-preview .mde-preview-content::-webkit-scrollbar-thumb {
+  background: var(--color-primary, #088395);
+  border-radius: 4px;
+}
+
+.mde-preview .mde-preview-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary, #071952);
+}
+
+.ocean {
+  --background: #37b7c3;
+  --secondary-background: #ebf4f6;
+  --primary: #088395;
+  --secondary: #071952;
+  color: black;
+}
+
+.purpur {
+  --background: #6a1e55;
+  --secondary-background: #a64d79;
+  --primary: #3b1c32;
+  --secondary: #1a1a1d;
+  color: white;
+}
+@theme inline {
   --color-background: var(--background);
   --color-secondary-bg: var(--secondary-background);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 }
 
-@theme{
+@theme {
   --animate-rotateBlue: rotateBlue 0.5s ease-in-out;
   --animate-rotatePurple: rotatePurple 0.5s ease-in-out;
   @keyframes rotateBlue {
-  0% {
-    transform: rotateX(0deg);
-    color: #37B7C3;
+    0% {
+      transform: rotateX(0deg);
+      color: #37b7c3;
+    }
+    100% {
+      transform: rotateX(360deg);
+      color: #a64d79;
+    }
   }
-  100% {
-    transform: rotateX(360deg);
-    color: #A64D79;
-  } 
-}
- @keyframes rotatePurple{
-  0% {
-    transform: rotateX(0deg);
-    color: #A64D79;
+  @keyframes rotatePurple {
+    0% {
+      transform: rotateX(0deg);
+      color: #a64d79;
+    }
+    100% {
+      transform: rotateX(-360deg);
+      color: #37b7c3;
+    }
   }
-  100% {
-    transform: rotateX(-360deg);
-    color: #37B7C3;
-  }
- }
 }
